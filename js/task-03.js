@@ -12,3 +12,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryElem = document.querySelector(".gallery");
+
+const htmlMurcup = images
+  .map(({ url, alt }) => 
+  `
+  <li>
+    <img src="${url}", alt='${alt}' class="img-task3">
+  </li>
+  `
+  )
+  .join("")
+  
+
+galleryElem.insertAdjacentHTML("afterbegin", htmlMurcup);
+
+galleryElem.classList.add("flex");
+
