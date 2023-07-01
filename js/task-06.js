@@ -10,7 +10,7 @@ function onCheckResult(event) {
     const corectInputLength = Number(inputElem.dataset.length);
     //якщо довжина значення текущого елемента така ж як в
     //дата-атрибуті, то добавляю клас валідний
-    if (event.currentTarget.value.length === corectInputLength) {
+    if (event.currentTarget.value.trim().length === corectInputLength) {
         inputElem.classList.add("valid");
         inputElem.classList.remove("invalid");
     } else {
