@@ -8,3 +8,4 @@ function onChangeText(event) {
     //розмір тексту спана = значенню текущього елемента
     spanElem.style.fontSize = `${event.currentTarget.value}px`;
 }
+onChangeText();
