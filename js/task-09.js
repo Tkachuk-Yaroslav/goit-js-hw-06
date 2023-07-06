@@ -17,7 +17,7 @@ function onButtonCkick() {
   const bodyBackgroundColor = getRandomHexColor();
   bodyElem.style.backgroundColor = `${bodyBackgroundColor}`;
   //вивожу колір в RGB форматі або в HEX форматі(закоментовано)
-  colorTextElem.textContent = bodyElem.style.backgroundColor;
+  colorTextElem.textContent = bodyBackgroundColor;
   // colorTextElem.textContent = getRandomHexColor();
 }
 
