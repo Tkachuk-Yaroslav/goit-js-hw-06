@@ -8,6 +8,12 @@ const btnCreate = document.querySelector("[data-create]");
 const btnDestroy = document.querySelector("[data-destroy]");
 const inputElem = document.querySelector("input");
 const divBoxes = document.querySelector("#boxes");
+const minElem = Number(inputElem.min);
+// console.log(minElem)
+const maxElem = Number(inputElem.max);
+// console.log(maxElem)
+const stepElem = Number(inputElem.step);
+// console.log(stepElem)
 
 //функція яка створює і добавляє квадрати
 function createBoxes(amount) {
@@ -15,8 +21,14 @@ function createBoxes(amount) {
   const divFragment = document.createDocumentFragment();
   //початкове значення довжини і ширини діва
   const startSizeDiv = 30;
+  // console.log(inputElem.value < minElem)
+  // console.log(inputElem.value > maxElem)
+  if (inputElem.value < minElem || inputElem.value > maxElem) {
+    alert("You have entered an invalid value! Try again!");
+    return;
+  }
   
-  for (let i = 0; i < amount; i++) {
+  for (let i = 0; i < amount; i+=stepElem) {
     //оновлюю значення ширини і довжини
     const sizeDiv = startSizeDiv + i * 10;
     //створюю дів
