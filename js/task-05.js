@@ -5,7 +5,7 @@ const outputElem = document.getElementById('name-output');
 inputElem.addEventListener('input', returnOutput);
 //колбек для прослуховувача події
 function returnOutput() {
-    let currentValue = inputElem.value;
+    let currentValue = inputElem.value.trim();
     //якщо інпут порожній пишеться анонімус
     if (currentValue === '') {
         outputElem.textContent = 'Anonymous';
