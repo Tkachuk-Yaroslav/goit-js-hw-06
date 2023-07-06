@@ -6,6 +6,6 @@ inputElem.addEventListener("input", onChangeText);
 //колбек для слухача подій
 function onChangeText(event) {
     //розмір тексту спана = значенню текущього елемента
-    spanElem.style.fontSize = `${event.currentTarget.value}px`;
+    spanElem.style.fontSize = `${inputElem.value}px`;
 }
 onChangeText();
